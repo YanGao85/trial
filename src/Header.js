@@ -15,7 +15,7 @@ class Header extends Component {
             tackling challenging algorithms and hunting down bugs with my 20/20
             vision.
           </p>
-          <p className="header-subtitle">Also a passionate Licensed Optician</p>
+          {/* <p className="header-subtitle">Also a passionate Licensed Optician</p> */}
         </div>
         <Social iconColor="icon-white" />
         <div className="header-learnmore pulse">
