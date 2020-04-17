@@ -24,7 +24,7 @@ class Skills extends Component {
         "Firebase",
         "FireStore",
         "Python",
-        "TypesScript",
+        "TypeScript",
         "GraphQL",
         "Ionic React",
       ],
