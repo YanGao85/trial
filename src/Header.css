@@ -1,5 +1,5 @@
 .header {
-  background-color: rgba(85, 202, 249, 1);
+  background-color: #55caf9;
   height: 90vh;
   padding: 10%;
   color: white;
@@ -14,7 +14,7 @@
 }
 .header-title {
   font-size: 2em;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: white;
 }
 .header-subtitle {

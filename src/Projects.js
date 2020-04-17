@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
-import './Projects.css';
-import './animations.css';
-import SectionHeader from './SectionHeader';
-import projectInfo from './projectData';
-import Scroll from 'react-scroll';
+import React, { Component } from "react";
+import "./Projects.css";
+import "./animations.css";
+import SectionHeader from "./SectionHeader";
+import projectInfo from "./projectData";
+import Scroll from "react-scroll";
 const Element = Scroll.Element;
 
 const Project = (props) => {
-  const { name, description, imageURL, github, demo, presentation, orientation, altText } = props.info;
+  const {
+    name,
+    description,
+    imageURL,
+    github,
+    demo,
+    presentation,
+    orientation,
+    altText,
+  } = props.info;
   const { animation } = props;
 
   return (
@@ -20,19 +29,20 @@ const Project = (props) => {
         <p>{description}</p>
       </div>
       <div className="link-container">
-        {
-          demo
-            ? <a href={demo} target="_blank" rel="noopener noreferrer">Demo</a>
-            : null
-          }
-        <a href={github} target="_blank" rel="noopener noreferrer">Code</a>
-        {
-          presentation
-          ? <a href={presentation} target="_blank" rel="noopener noreferrer">Presentation</a>
-          : null
-        }
+        {demo ? (
+          <a href={demo} target="_blank" rel="noopener noreferrer">
+            Demo
+          </a>
+        ) : null}
+        <a href={github} target="_blank" rel="noopener noreferrer">
+          Code
+        </a>
+        {presentation ? (
+          <a href={presentation} target="_blank" rel="noopener noreferrer">
+            Presentation
+          </a>
+        ) : null}
       </div>
-
     </div>
   );
 };
@@ -41,23 +51,23 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      animationClass: ''
+      animationClass: "",
     };
     this.animateScroll = this.animateScroll.bind(this);
   }
 
-  componentDidMount () {
-    window.addEventListener('scroll', this.animateScroll);
+  componentDidMount() {
+    window.addEventListener("scroll", this.animateScroll);
   }
 
-  componentWillUnmount () {
-    window.removeEventListener('scroll', this.animateScroll);
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.animateScroll);
   }
 
-  animateScroll (evt) {
+  animateScroll(evt) {
     let scrollTop = evt.target.scrollingElement.scrollTop;
     if (scrollTop > 850) {
-      this.setState({ animationClass: 'fadeIn' });
+      this.setState({ animationClass: "fadeIn" });
     }
   }
 
@@ -65,18 +75,15 @@ class Projects extends Component {
     return (
       <Element name="projects-element">
         <section className="project-section">
-          <SectionHeader
-            title="Portfolio"
-            underlineColor="pink-underline"
-          />
+          <SectionHeader title="Portfolio" underlineColor="navy-underline" />
           <div className="projects-container">
-            {projectInfo.map(project =>
+            {projectInfo.map((project) => (
               <Project
                 info={project}
                 key={project.id}
                 animation={this.state.animationClass}
-              />)
-            }
+              />
+            ))}
           </div>
         </section>
       </Element>

@@ -1,11 +1,13 @@
 .about-section {
   /*background: rgba(250, 228, 229, 1);*/
-  background: #FCEEEF;
+  background: #e5e3dc;
   padding: 5vh;
-  color: #404040
+  color: #404040;
 }
 .round-border {
   border-radius: 50%;
+  width: 200px;
+  height: 200px;
 }
 .profile-pic {
   display: block;
@@ -18,7 +20,7 @@
   margin: 0 auto;
 }
 .about-summary a {
-  color: #4CB6DF;
+  color: #4cb6df;
   font-weight: bold;
 }
 @media (min-width: 650px) {
